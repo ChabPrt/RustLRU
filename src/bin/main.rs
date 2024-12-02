@@ -1,26 +1,29 @@
-use rust_lru::cache::lru_cache::Cache;
+use rust_lru::cache::lru_cache::{Cache};
 
 fn main() {
-    // New Cache => size 3
     let mut cache = Cache::new(3);
 
-    // Insert data
-    cache.put("A", String::from("value_a"));
-    cache.put("B", String::from("value_b"));
-    cache.put("C", String::from("value_c"));
+    // Create & Update
+    cache.put("A", "value_a");
+    cache.put("B", "value_b");
+    cache.put("C", "value_c");
 
-    // Get + Display => key == B
-    let value = cache.get(&"B");
-    match value {
-        Some(v) => println!("B: {}", v),
-        None => println!("B not found"),
+    println!("Cache after puts: {}", cache);
+
+    // Read
+    if let Some(value) = cache.get(&"B") {
+        println!("Found B: {}", value);
     }
 
-    // Insert element + Carbage
-    cache.put("D", String::from("value_d"));
-    let value = cache.get(&"A"); //Carbage
-    match value {
-        Some(v) => println!("A: {}", v),
-        None => println!("A not found"),
+    // Remove
+    if let Some(value) = cache.remove(&"A") {
+        println!("Removed A: {}", value);
     }
+
+    // Check the cache after removal
+    println!("Cache after removal: {}", cache);
+
+    // Clear
+    cache.clear();
+    println!("Cache after clear: {}", cache);
 }
