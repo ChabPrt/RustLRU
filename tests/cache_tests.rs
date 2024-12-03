@@ -1,6 +1,6 @@
 #[cfg(test)]
 mod tests {
-    use rust_lru::cache::lru_cache::Cache;
+    use rust_lru::cache::cache::Cache;
 
     // Test => Basic operation
     #[test]

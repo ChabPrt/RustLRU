@@ -1,4 +1,4 @@
-use rust_lru::cache::lru_cache::{Cache};
+use rust_lru::cache::cache::{Cache};
 
 fn main() {
     let mut cache = Cache::new(3);

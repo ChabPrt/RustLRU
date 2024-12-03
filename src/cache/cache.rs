@@ -26,7 +26,7 @@ pub trait CacheOperations<K, V> {
     /// # Exemple
     ///
     /// ```
-    /// use rust_lru::cache::lru_cache::Cache;
+    /// use rust_lru::cache::cache::Cache;
     /// let mut cache = Cache::new(1);
     /// cache.put("key_a", "value_a");
     /// assert_eq!(cache.get(&"key_a"), Some(&"value_a"));
@@ -50,7 +50,7 @@ pub trait CacheOperations<K, V> {
     /// # Exemple
     ///
     /// ```
-    /// use rust_lru::cache::lru_cache::Cache;
+    /// use rust_lru::cache::cache::Cache;
     /// let mut cache = Cache::new(1);
     /// cache.put("key_a", "value_a");
     /// assert_eq!(cache.get(&"key_a"), Some(&"value_a"));
@@ -75,7 +75,7 @@ pub trait CacheOperations<K, V> {
     /// # Exemple
     ///
     /// ```
-    /// use rust_lru::cache::lru_cache::Cache;
+    /// use rust_lru::cache::cache::Cache;
     /// let mut cache = Cache::new(3);
     /// cache.put("key_c", "value_c");
     /// assert_eq!(cache.remove(&"key_c"), Some("value_c"));
@@ -90,7 +90,7 @@ pub trait CacheOperations<K, V> {
     /// # Exemple
     ///
     /// ```
-    /// use rust_lru::cache::lru_cache::Cache;
+    /// use rust_lru::cache::cache::Cache;
     /// let mut cache = Cache::new(3);
     /// cache.put("key_a", "value_a");
     /// cache.clear();
@@ -119,7 +119,7 @@ where K: Hash + Eq + Clone {
     /// # Exemple
     ///
     /// ```
-    /// use rust_lru::cache::lru_cache::Cache;
+    /// use rust_lru::cache::cache::Cache;
     /// let cache = Cache::new(3);
     /// assert_eq!(cache.len(), 0);
     /// ```
@@ -145,7 +145,7 @@ where K: Hash + Eq + Clone {
     /// # Exemple
     ///
     /// ```
-    /// use rust_lru::cache::lru_cache::Cache;
+    /// use rust_lru::cache::cache::Cache;
     /// let mut cache = Cache::new(1);
     /// cache.put("key_a", "value_a");
     /// assert_eq!(cache.get(&"key_a"), Some(&"value_a"));
@@ -176,7 +176,7 @@ where K: Hash + Eq + Clone {
     /// # Exemple
     ///
     /// ```
-    /// use rust_lru::cache::lru_cache::Cache;
+    /// use rust_lru::cache::cache::Cache;
     /// let mut cache = Cache::new(1);
     /// cache.put("key_a", "value_a");
     /// assert_eq!(cache.get(&"key_a"), Some(&"value_a"));
@@ -204,7 +204,7 @@ where K: Hash + Eq + Clone {
     /// # Exemple
     ///
     /// ```
-    /// use rust_lru::cache::lru_cache::Cache;
+    /// use rust_lru::cache::cache::Cache;
     /// let mut cache = Cache::new(1);
     /// cache.put("key_a", "value_a");
     /// cache.remove(&"key_a");
@@ -224,7 +224,7 @@ where K: Hash + Eq + Clone {
     /// # Exemple
     ///
     /// ```
-    /// use rust_lru::cache::lru_cache::Cache;
+    /// use rust_lru::cache::cache::Cache;
     /// let mut cache = Cache::new(1);
     /// cache.put("key_a", "value_a");
     /// cache.clear();
@@ -244,7 +244,7 @@ where K: Hash + Eq + Clone {
     /// # Exemple
     ///
     /// ```
-    /// use rust_lru::cache::lru_cache::Cache;
+    /// use rust_lru::cache::cache::Cache;
     /// let mut cache = Cache::new(1);
     /// cache.put("key_a", "value_a");
     /// assert_eq!(cache.len(), 1);
@@ -262,7 +262,7 @@ where K: Hash + Eq + Clone {
     /// # Exemple
     ///
     /// ```
-    /// use rust_lru::cache::lru_cache::Cache;
+    /// use rust_lru::cache::cache::Cache;
     /// let mut cache = Cache::new(1);
     /// assert_eq!(cache.is_empty(), true);
     /// cache.put("key_a", "value_a");
